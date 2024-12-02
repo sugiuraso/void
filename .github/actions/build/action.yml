@@ -1,0 +1,30 @@
+name: 'Build'
+inputs:
+    node_version:
+      required: true
+
+runs:
+  using: "composite"
+  steps:
+    - uses: pnpm/action-setup@v4
+      with:
+        version: 9
+        run_install: false
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node_version }}
+        cache: pnpm
+        registry-url: "https://npm.pkg.github.com"
+
+    - name: Install
+      run: pnpm i
+      shell: bash
+      env:
+        # Token is required to install private packages, if you repo is located in other owner, you need to change to use secrets.
+        NODE_AUTH_TOKEN: ${{ github.token }}
+
+    - name: Build
+      run: pnpm run build
+      shell: bash

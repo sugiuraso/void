@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "viy-menu": ["./node_modules/@ymc-group/viy-menu/dist/viy-menu.d.ts", "./node_modules/@ymc-group/viy-menu/dist/viy-menu.js"],
+      "viy-ui": ["./node_modules/@ymc-group/viy-ui/dist/viy-ui.es.min.d.ts", "./node_modules/@ymc-group/viy-ui/dist/viy-ui.es.min.js"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

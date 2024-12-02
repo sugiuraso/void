@@ -1,0 +1,17 @@
+# .gitkeep
+
+- Place your view components (usually pages) here.
+
+- Overwrite default Home Page:
+  src/views/home.vue
+  src/views/home/home.vue
+
+- Overwrite default Login Page:
+  src/views/login.vue
+  src/views/login/login.vue
+
+- Other modules example:
+  src/module/page1.vue
+  src/module/submodule/page2.vue
+
+Note: This file can be deleted once the folder contains other files.

@@ -1,0 +1,9 @@
+# .gitkeep
+
+- To use an icon in a Vue component, place the SVG file in this folder (e.g., /src/icons/AddBox.svg).
+- Use the icon directly in your Vue template without importing it:
+  <template>
+    <AddBox />
+  </template>
+
+Note: This file can be deleted once the folder contains other files.
